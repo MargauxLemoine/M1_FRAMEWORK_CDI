@@ -4,9 +4,14 @@ public class ExpressoCoffeeFactory {
 	
 	private static ExpressoCoffee ExpressoCoffee;
 	
+	public static void setExpressoCoffee(ExpressoCoffee ExpressoCoffee) {
+		this.ExpressoCoffee = ExpressoCoffee;
+	}
+	
 	public static ExpressoCoffee getExpressoCoffee() {
-		if (ExpressoCoffee == null)
+		if (ExpressoCoffee == null) {
 			return new ExpressoCoffee();
+		}
 		return ExpressoCoffee;
 	}
 }

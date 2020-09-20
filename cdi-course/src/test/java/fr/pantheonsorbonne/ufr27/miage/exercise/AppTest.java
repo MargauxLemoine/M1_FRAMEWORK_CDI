@@ -7,6 +7,21 @@ import org.junit.Test;
 import fr.pantheonsorbonne.ufr27.miage.exercise.coffee.Coffee;
 
 public class AppTest {
+	
+	private final BlackCoffee BlackCoffee = new BlackCoffee();
+	private final ExpressoCoffee ExpressoCoffee = new ExpressoCoffee();
+	
+	@Before
+	public void setUp() {
+		BlackCoffeeFactory.setBlackCoffee(BlackCoffee);
+		ExpressoCoffeeFactory.setExpressoCoffee(ExpressoCoffee);
+	}
+	
+	@After
+	public void tearDown() {
+		BlackCoffeeFactory.setBlackCoffee(null);
+		ExpressoCoffeeFactory.setExpressoCoffee(null);
+	}
 
 	@Test
 	public void testCase1() {
