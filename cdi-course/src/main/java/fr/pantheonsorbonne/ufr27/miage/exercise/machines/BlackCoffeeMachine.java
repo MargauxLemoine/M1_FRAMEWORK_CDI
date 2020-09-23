@@ -5,7 +5,8 @@ import fr.pantheonsorbonne.ufr27.miage.exercise.coffee.BlackCoffee;
 
 public class BlackCoffeeMachine implements CoffeeMachine {
 	
-	public Coffee getCoffee() {
+	@Override
+	public BlackCoffee getCoffee() {
 		return new BlackCoffee();
 	}
 }

@@ -39,6 +39,7 @@ public class AppTest {
 			
 			Client client = new Client(-3);
 			
+			//COnfiguration de l'injection
 			CoffeeMachine machine = null;
 			
 			if (client.getAwakenessLevel() > -15) {
@@ -47,7 +48,8 @@ public class AppTest {
 				machine = new ExpressoMachine();
 			}
 			
-			Waiter waiter = new Waiter(BlackCoffee, ExpressoCoffee, machine);
+			//Injection 
+			Waiter waiter = new Waiter(machine);
 			
 			int profit = 3;
 
@@ -72,7 +74,7 @@ public class AppTest {
 
 			Client client = new Client(-20);
 			
-CoffeeMachine machine = null;
+			CoffeeMachine machine = null;
 			
 			if (client.getAwakenessLevel() > -15) {
 				machine = new BlackCoffeeMachine();

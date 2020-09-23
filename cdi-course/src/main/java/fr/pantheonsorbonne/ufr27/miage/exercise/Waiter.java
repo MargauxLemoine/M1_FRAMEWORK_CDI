@@ -9,18 +9,9 @@ import fr.pantheonsorbonne.ufr27.miage.exercise.machines.CoffeeMachine;
 
 class Waiter {
 	
-	private final BlackCoffee c1;
-	private final ExpressoCoffee c2;
 	private final CoffeeMachine machine;
-	
-	public Waiter() {
-		c1 = BlackCoffeeFactory.getBlackCoffee();
-		c2 = ExpressoCoffeeFactory.getExpressoCoffee();
-	}
-	
-	public Waiter(BlackCoffee BlackCoffee, ExpressoCoffee ExpressoCoffee, CoffeeMachine machine) {
-		this.c1 = BlackCoffee;
-		this.c2 = ExpressoCoffee;
+
+	public Waiter(CoffeeMachine machine) {
 		this.machine = machine;
 	}
 
